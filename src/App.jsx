@@ -1,13 +1,13 @@
 import { Fragment } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Input from "./components/Input/Input";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div>
       <Header />
-      <Input />
+      <Home />
     </div>
   );
 }
