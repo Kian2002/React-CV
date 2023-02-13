@@ -3,12 +3,13 @@
   padding: 0;
 }
 
+:root {
+  --background-color: #1818;
+  --text-color: #FFF;
+}
+
 html,
 body {
   height: 100%;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: 'Open Sans', sans-serif;
 }
