@@ -5,10 +5,10 @@ import Input from "./components/Input/Input";
 
 function App() {
   return (
-    <Fragment>
+    <div>
       <Header />
       <Input />
-    </Fragment>
+    </div>
   );
 }
 

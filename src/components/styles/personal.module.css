@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.main h1 {
+    color: var(--text-color);
+    display: block;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-wrapper input {
+    outline: none;
+    border: none;
+    border-radius: .2rem;
+    padding: .5rem;
+    width: 100%;
+}

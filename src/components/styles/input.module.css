@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 2rem 0;
+}
+
+.input {
+    padding: 2rem;
+    background-color: var(--element-color);
+}
