@@ -9,4 +9,30 @@
 .input {
     padding: 2rem;
     background-color: var(--element-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wrapper h1 {
+    color: var(--text-color);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-wrapper input {
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    padding: .5rem;
 }

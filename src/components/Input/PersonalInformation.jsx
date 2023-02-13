@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../styles/personal.module.css";
+import styles from "../styles/input.module.css";
 
 const PersonalInformation = () => {
   return (
-    <div className={styles.main}>
+    <div className={styles.wrapper}>
       <h1>Personal Information</h1>
       <div className={styles["input-wrapper"]}>
         <input type="text" placeholder="First Name" />
