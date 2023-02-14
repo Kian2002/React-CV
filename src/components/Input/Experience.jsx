@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/home.module.css";
+import ExperienceItems from "./ExperienceItems";
+import { v4 as uuidv4 } from "uuid";
 
 const Experience = () => {
+  const [inputList, setInputList] = useState([
+    <ExperienceItems key={uuidv4()} />,
+  ]);
+
+  const handleAdd = () => {
+    setInputList([...inputList, <ExperienceItems key={uuidv4()} />]);
+  };
+
+  const handleDelete = (e) => {
+    const id = e.target.id;
+    const newList = inputList.filter((item) => item.key !== id);
+    setInputList(newList);
+  };
+
   return (
     <div className={styles.wrapper}>
       <h1>Experience</h1>
-      <div className={styles["input-wrapper"]}>
-        <input type="text" placeholder="Position" />
-        <input type="text" placeholder="Company" />
-        <input type="text" placeholder="City" />
-        <input type="text" placeholder="From" />
-        <input type="text" placeholder="To" />
-      </div>
+      {inputList.map((item) => {
+        return (
+          <div key={item.key} className={styles["input-wrapper"]}>
+            {item}
+            <button id={item.key} onClick={handleDelete}>
+              Delete
+            </button>
+          </div>
+        );
+      })}
+      <button onClick={handleAdd}>Add</button>
     </div>
   );
 };
