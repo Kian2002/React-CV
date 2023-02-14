@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PersonalInformation from "./Input/PersonalInformation";
 import Experience from "./Input/Experience";
 import Education from "./Input/Education";
@@ -6,15 +6,27 @@ import styles from "./styles/home.module.css";
 import Output from "./output/Output";
 
 const Home = () => {
+  const [personalInfo, setPersonalInfo] = useState({
+    fName: "",
+    lName: "",
+    title: "",
+    address: "",
+    number: "",
+    email: "",
+    description: "",
+  });
   return (
     <main className={styles.main}>
       <div className={styles.input}>
-        <PersonalInformation />
+        <PersonalInformation
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
+        />
         <Experience />
         <Education />
       </div>
       <div className={styles.output}>
-        <Output />
+        <Output personalInfo={personalInfo} />
       </div>
     </main>
   );

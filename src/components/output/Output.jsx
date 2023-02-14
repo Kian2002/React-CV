@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../styles/output.module.css";
+import PersonalOutput from "./PersonalOutput";
 
-const Output = () => {
+const Output = ({ personalInfo }) => {
   return (
     <div>
       <header className={styles.header}> </header>
@@ -25,7 +26,7 @@ const Output = () => {
           </div>
         </div>
 
-        <div>PersonalInformation</div>
+        <PersonalOutput personalInfo={personalInfo} />
       </div>
     </div>
   );
