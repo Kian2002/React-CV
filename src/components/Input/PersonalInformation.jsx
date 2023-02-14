@@ -9,7 +9,6 @@ const PersonalInformation = () => {
         <input type="text" placeholder="First Name" />
         <input type="text" placeholder="Last Name" />
         <input type="text" placeholder="Title" />
-        <input type="file" placeholder="Photo" />
         <input type="address" placeholder="Address" />
         <input type="number" placeholder="Phone Number" maxLength="10" />
         <input type="email" placeholder="Email" />

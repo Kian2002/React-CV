@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../styles/home.module.css";
-import Input from "./Input";
 import { v4 as uuidv4 } from "uuid";
 import EducationItems from "./EducationItems";
 

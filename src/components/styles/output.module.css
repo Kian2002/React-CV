@@ -1,0 +1,13 @@
+.header {
+    background-color: var(--element-color);
+    height: 100px
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50rem;
+    background-color: var(--background-color);
+    height: 100%;
+}
