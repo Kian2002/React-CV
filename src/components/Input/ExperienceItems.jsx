@@ -1,14 +1,60 @@
-import React from "react";
-import Input from "./Input";
+import React, { useEffect, useState } from "react";
 
-const ExperienceItems = () => {
+const ExperienceItems = ({ experienceInfo, setExperienceInfo }) => {
+  const [experienceItems, setExperienceItems] = useState({
+    position: "",
+    company: "",
+    city: "",
+    from: "",
+    to: "",
+  });
+
+  useEffect(() => {
+    setExperienceInfo([...experienceInfo, experienceItems]);
+  }, [experienceItems]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setExperienceItems({ ...experienceItems, [name]: value });
+  };
+
   return (
     <>
-      <Input type="text" name="universityName" placeholder="Position" />
-      <Input type="text" name="city" placeholder="Company" />
-      <Input type="text" name="degree" placeholder="City" />
-      <Input type="text" name="subject" placeholder="From" />
-      <Input type="text" name="from" placeholder="To" />
+      <input
+        type="text"
+        name="position"
+        placeholder="Position"
+        onChange={handleChange}
+        value={experienceItems.position}
+      />
+      <input
+        type="text"
+        name="company"
+        placeholder="Company"
+        onChange={handleChange}
+        value={experienceItems.company}
+      />
+      <input
+        type="text"
+        name="city"
+        placeholder="City"
+        onChange={handleChange}
+        value={experienceItems.city}
+      />
+      <input
+        type="text"
+        name="from"
+        placeholder="from"
+        onChange={handleChange}
+        value={experienceItems.from}
+      />
+      <input
+        type="text"
+        name="to"
+        placeholder="to"
+        onChange={handleChange}
+        value={experienceItems.to}
+      />
     </>
   );
 };

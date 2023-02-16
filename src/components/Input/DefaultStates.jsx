@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const DefaultStates = () => {
   const [personalInfo, setPersonalInfo] = useState({
@@ -11,7 +11,17 @@ const DefaultStates = () => {
     description: "",
   });
 
-  return { personalInfo, setPersonalInfo };
+  const [experienceInfo, setExperienceInfo] = useState([
+    {
+      position: "",
+      company: "",
+      city: "",
+      from: "",
+      to: "",
+    },
+  ]);
+
+  return { personalInfo, setPersonalInfo, experienceInfo, setExperienceInfo };
 };
 
 export default DefaultStates;

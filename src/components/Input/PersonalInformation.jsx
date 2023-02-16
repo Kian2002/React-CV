@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../styles/home.module.css";
 
 const PersonalInformation = ({ personalInfo, setPersonalInfo }) => {
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setPersonalInfo({
       ...personalInfo,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 

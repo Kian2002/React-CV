@@ -3,13 +3,24 @@ import styles from "../styles/home.module.css";
 import ExperienceItems from "./ExperienceItems";
 import { v4 as uuidv4 } from "uuid";
 
-const Experience = () => {
+const Experience = ({ experienceInfo, setExperienceInfo }) => {
   const [inputList, setInputList] = useState([
-    <ExperienceItems key={uuidv4()} />,
+    <ExperienceItems
+      key={uuidv4()}
+      experienceInfo={experienceInfo}
+      setExperienceInfo={setExperienceInfo}
+    />,
   ]);
 
   const handleAdd = () => {
-    setInputList([...inputList, <ExperienceItems key={uuidv4()} />]);
+    setInputList([
+      ...inputList,
+      <ExperienceItems
+        key={uuidv4()}
+        experienceInfo={experienceInfo}
+        setExperienceInfo={setExperienceInfo}
+      />,
+    ]);
   };
 
   const handleDelete = (e) => {
