@@ -5,7 +5,6 @@ import Education from "./Input/Education";
 import styles from "./styles/home.module.css";
 import Output from "./output/Output";
 import DefaultStates from "./Input/DefaultStates";
-import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const { personalInfo, setPersonalInfo, experienceInfo, setExperienceInfo } =
@@ -25,18 +24,7 @@ const Home = () => {
         <Education />
       </div>
       <div className={styles.output}>
-        <Output personalInfo={personalInfo} />
-        {experienceInfo.map((item) => {
-          return (
-            <div key={uuidv4()}>
-              <span>{item.position}</span>
-              <span>{item.company}</span>
-              <span>{item.city}</span>
-              <span>{item.from}</span>
-              <span>{item.to}</span>
-            </div>
-          );
-        })}
+        <Output personalInfo={personalInfo} experienceInfo={experienceInfo} />
       </div>
     </main>
   );

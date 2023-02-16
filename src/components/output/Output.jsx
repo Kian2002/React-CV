@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../styles/output.module.css";
+import { ExperienceOutput } from "./ExperienceOutput";
 import PersonalOutput from "./PersonalOutput";
 
-const Output = ({ personalInfo }) => {
+const Output = ({ personalInfo, experienceInfo }) => {
   return (
     <div>
       <header className={styles.header}> </header>
@@ -12,11 +13,9 @@ const Output = ({ personalInfo }) => {
             <h1>Description</h1>
             <p>lorem</p>
           </div>
-          <div>
-            <h1>Experience</h1>
-            <span>From - To</span>
-            <span>Position-Company-City</span>
-          </div>
+
+          <ExperienceOutput experienceInfo={experienceInfo} />
+
           <div>
             <h1>Education</h1>
             <span>From - To</span>
