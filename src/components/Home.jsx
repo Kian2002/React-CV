@@ -23,9 +23,7 @@ const Home = () => {
         />
         <Education />
       </div>
-      <div className={styles.output}>
-        <Output personalInfo={personalInfo} experienceInfo={experienceInfo} />
-      </div>
+      <Output personalInfo={personalInfo} experienceInfo={experienceInfo} />
     </main>
   );
 };

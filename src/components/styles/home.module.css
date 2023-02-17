@@ -1,18 +1,22 @@
 .main {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
-    gap: 200px;
-    padding: 2rem 0;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 4rem 8rem;
+    max-width: 1800px;
+    margin: 0px auto;
 }
 
 .input {
-    padding: 2rem;
     background-color: var(--element-color);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    width: 800px;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 
 .wrapper {

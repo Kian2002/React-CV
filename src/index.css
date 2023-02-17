@@ -4,13 +4,14 @@
 }
 
 :root {
-  --background-color: #1818;
-  --text-color: #FFF;
-  --element-color: #182828;
+  --background-color: #C25B56;
+  --text-color: #FEF6EB;
+  --element-color: #74828F;
 }
 
 html,
 body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  background-color: #BEB9B5;
 }

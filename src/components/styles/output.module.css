@@ -1,15 +1,26 @@
-.header {
-    background-color: var(--element-color);
-    height: 100px
+.main {
+    width: 800px;
+    height: 1122px;
+    position: sticky;
+    top: 10px;
+    display: grid;
+    grid-template-columns: 565px 235px;
+    grid-template-rows: 132px 990px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    overflow: hidden;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50rem;
+.header {
+    grid-column: span 2;
+    padding: 2rem;
     background-color: var(--background-color);
-    height: 100%;
+    color: var(--text-color);
+}
+
+.wrapper {
+    padding: 2rem;
+    background-color: var(--element-color);
+    color: var(--text-color);
 }
 
 .experience {
@@ -39,4 +50,10 @@
 .experiencePosition div {
     display: flex;
     gap: .5rem;
+}
+
+.personalMain {
+    padding: 2rem;
+    background-color: #BEB9B5;
+    color: var(--text-color);
 }

@@ -5,28 +5,31 @@ import PersonalOutput from "./PersonalOutput";
 
 const Output = ({ personalInfo, experienceInfo }) => {
   return (
-    <div>
-      <header className={styles.header}> </header>
-      <div className={styles.main}>
+    <div className={styles.main}>
+      <header className={styles.header}>
+        <h1>
+          {personalInfo.fName} {personalInfo.lName}
+        </h1>
+        <span>{personalInfo.title}</span>
+      </header>
+
+      <div className={styles.wrapper}>
         <div>
-          <div>
-            <h1>Description</h1>
-            <p>lorem</p>
-          </div>
-
-          <ExperienceOutput experienceInfo={experienceInfo} />
-
-          <div>
-            <h1>Education</h1>
-            <span>From - To</span>
-            <span>Name-City</span>
-            <span>Degree</span>
-            <span>Subject</span>
-          </div>
+          <h1>Description</h1>
+          <p>lorem</p>
         </div>
 
-        <PersonalOutput personalInfo={personalInfo} />
+        <ExperienceOutput experienceInfo={experienceInfo} />
+
+        <div>
+          <h1>Education</h1>
+          <span>From - To</span>
+          <span>Name-City</span>
+          <span>Degree</span>
+          <span>Subject</span>
+        </div>
       </div>
+      <PersonalOutput personalInfo={personalInfo} />
     </div>
   );
 };
