@@ -16,7 +16,7 @@ const Output = ({ personalInfo, experienceInfo }) => {
       <div className={styles.wrapper}>
         <div>
           <h1>Description</h1>
-          <p>lorem</p>
+          <p>{personalInfo.description}</p>
         </div>
 
         <ExperienceOutput experienceInfo={experienceInfo} />

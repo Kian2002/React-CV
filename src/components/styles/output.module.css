@@ -7,7 +7,6 @@
     grid-template-columns: 565px 235px;
     grid-template-rows: 132px 990px;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
-    overflow: hidden;
 }
 
 .header {
@@ -56,4 +55,22 @@
     padding: 2rem;
     background-color: #BEB9B5;
     color: var(--text-color);
+}
+
+.personalDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
 }
