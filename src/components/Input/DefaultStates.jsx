@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const DefaultStates = () => {
   const [personalInfo, setPersonalInfo] = useState({
@@ -13,6 +14,7 @@ const DefaultStates = () => {
 
   const [experienceInfo, setExperienceInfo] = useState([
     {
+      id: uuidv4(),
       position: "",
       company: "",
       city: "",

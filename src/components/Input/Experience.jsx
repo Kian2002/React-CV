@@ -4,19 +4,23 @@ import ExperienceItems from "./ExperienceItems";
 import { v4 as uuidv4 } from "uuid";
 
 const Experience = ({ experienceInfo, setExperienceInfo }) => {
+  const id = experienceInfo[0].id;
   const [inputList, setInputList] = useState([
     <ExperienceItems
-      key={uuidv4()}
+      key={id}
+      id={id}
       experienceInfo={experienceInfo}
       setExperienceInfo={setExperienceInfo}
     />,
   ]);
 
   const handleAdd = () => {
+    const id = uuidv4();
     setInputList([
       ...inputList,
       <ExperienceItems
-        key={uuidv4()}
+        key={id}
+        id={id}
         experienceInfo={experienceInfo}
         setExperienceInfo={setExperienceInfo}
       />,
@@ -24,9 +28,13 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
   };
 
   const handleDelete = (e) => {
-    const id = e.target.id;
-    const newList = inputList.filter((item) => item.key !== id);
-    setInputList(newList);
+    const newInputList = inputList.filter((item) => item.key !== e.target.id);
+    setInputList(newInputList);
+    const newExperienceInfo = experienceInfo.filter(
+      (item) => item.id !== e.target.id
+    );
+    setExperienceInfo(newExperienceInfo);
+    console.log(id);
   };
 
   return (

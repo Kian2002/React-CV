@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const ExperienceItems = ({ experienceInfo, setExperienceInfo }) => {
+const ExperienceItems = ({ experienceInfo, setExperienceInfo, id }) => {
   const [experienceItems, setExperienceItems] = useState({
+    id: id,
     position: "",
     company: "",
     city: "",
