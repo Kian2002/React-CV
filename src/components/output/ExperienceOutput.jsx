@@ -4,20 +4,19 @@ import styles from "../styles/output.module.css";
 
 export const ExperienceOutput = ({ experienceInfo }) => {
   return (
-    <div className={styles.experience}>
-      <h3>Experience</h3>
+    <div className={styles["wrapper__main"]}>
+      <h3 className={styles["wrapper__h3"]}>Experience</h3>
       {experienceInfo.map((item) => {
         return (
-          <div key={uuidv4()} className={styles.experienceItems}>
-            <div className={styles.fromTo}>
+          <div key={uuidv4()} className={styles["wrapper__content"]}>
+            <h4 className={styles["wrapper__content__date"]}>
               {item.from} {item.position != "" && "-"} {item.to}
-            </div>
+            </h4>
 
-            <div className={styles.experiencePosition}>
-              <div>{item.position}</div>
+            <div className={styles["wrapper__content__main"]}>
+              <h4>{item.position}</h4>
               <div>
-                <span>{item.company}</span>
-                <span>{item.city}</span>
+                {item.company}, {item.city}
               </div>
             </div>
           </div>

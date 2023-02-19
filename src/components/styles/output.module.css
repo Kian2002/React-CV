@@ -22,37 +22,6 @@
     color: var(--background-color);
 }
 
-/* experience */
-
-.experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.2rem;
-}
-
-.experienceItems {
-    display: flex;
-    gap: 2rem;
-}
-
-.fromTo {
-    display: flex;
-    gap: 1rem;
-}
-
-.experiencePosition {
-    display: flex;
-    flex-direction: column;
-    gap: .2rem;
-}
-
-.experiencePosition div {
-    display: flex;
-    gap: .5rem;
-}
-
 /* personal */
 
 .personalMain {
@@ -89,6 +58,7 @@
 }
 
 .wrapper__h3 {
+    padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--element-color);
     color: #3a3e40;
 }
