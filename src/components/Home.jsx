@@ -5,6 +5,7 @@ import Education from "./Input/Education";
 import styles from "./styles/home.module.css";
 import Output from "./output/Output";
 import DefaultStates from "./Input/DefaultStates";
+import { useReactToPrint } from "react-to-print";
 
 const Home = () => {
   const {
@@ -15,6 +16,27 @@ const Home = () => {
     educationInfo,
     setEducationInfo,
   } = DefaultStates();
+
+  const componentRef = React.useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+
+    pageStyle: `
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      html, body {
+        width: 210mm;
+        height: 297mm;
+      }
+    }
+    `,
+
+    documentTitle: "CV",
+  });
 
   return (
     <main className={styles.main}>
@@ -31,11 +53,15 @@ const Home = () => {
           educationInfo={educationInfo}
           setEducationInfo={setEducationInfo}
         />
+        <button className={styles.button} onClick={handlePrint}>
+          Print
+        </button>
       </div>
       <Output
         personalInfo={personalInfo}
         experienceInfo={experienceInfo}
         educationInfo={educationInfo}
+        ref={componentRef}
       />
     </main>
   );
