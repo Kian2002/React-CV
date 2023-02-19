@@ -10,7 +10,7 @@ export const ExperienceOutput = ({ experienceInfo }) => {
         return (
           <div key={uuidv4()} className={styles["wrapper__content"]}>
             <h4 className={styles["wrapper__content__date"]}>
-              {item.from} {item.position != "" && "-"} {item.to}
+              {item.from} - {item.to}
             </h4>
 
             <div className={styles["wrapper__content__main"]}>

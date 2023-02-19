@@ -6,6 +6,8 @@
     padding: 4rem 8rem;
     max-width: 1800px;
     margin: 0px auto;
+    transition: all .4s ease-in-out;
+    scroll-behavior: smooth;
 }
 
 .input {
@@ -39,4 +41,45 @@
     border: 1px solid transparent;
     border-radius: .2rem;
     padding: .5rem;
+    color: var(--background-color);
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.input-wrapper input:focus {
+    border: 1px solid var(--background-color);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--background-color);
+    font-size: 1.1rem;
+}
+
+.button {
+    background-color: var(--background-color);
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+.button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 1500px) {
+    .main {
+        flex-direction: column;
+        padding: 4rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
 }

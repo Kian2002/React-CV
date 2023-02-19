@@ -15,8 +15,8 @@ const Output = ({ personalInfo, experienceInfo, educationInfo }) => {
       </header>
 
       <div className={styles.wrapper}>
-        <div>
-          <h3>Description</h3>
+        <div className={styles["wrapper__main"]}>
+          <h3 className={styles["wrapper__h3"]}>Description</h3>
           <p>{personalInfo.description}</p>
         </div>
 

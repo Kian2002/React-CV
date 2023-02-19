@@ -38,13 +38,19 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
         return (
           <div key={item.key} className={styles["input-wrapper"]}>
             {item}
-            <button id={item.key} onClick={handleDelete}>
+            <button
+              className={styles.button}
+              id={item.key}
+              onClick={handleDelete}
+            >
               Delete
             </button>
           </div>
         );
       })}
-      <button onClick={handleAdd}>Add</button>
+      <button className={styles.button} onClick={handleAdd}>
+        Add
+      </button>
     </div>
   );
 };
