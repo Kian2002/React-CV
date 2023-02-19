@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ExperienceItems = ({ experienceInfo, setExperienceInfo, id }) => {
+const ExperienceItems = ({ setExperienceInfo, id }) => {
   const [experienceItems, setExperienceItems] = useState({
     id: id,
     position: "",
@@ -11,12 +11,24 @@ const ExperienceItems = ({ experienceInfo, setExperienceInfo, id }) => {
   });
 
   useEffect(() => {
-    setExperienceInfo([...experienceInfo, experienceItems]);
+    setExperienceInfo((prevExperienceInfo) => {
+      const index = prevExperienceInfo.findIndex((item) => item.id === id);
+      if (index !== -1) {
+        const updatedExperienceInfo = [...prevExperienceInfo];
+        updatedExperienceInfo[index] = experienceItems;
+        return updatedExperienceInfo;
+      } else {
+        console.log("never say never");
+        return [...prevExperienceInfo, experienceItems];
+      }
+    });
   }, [experienceItems]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setExperienceItems({ ...experienceItems, [name]: value });
+    setExperienceItems((prevExperienceItems) => {
+      return { ...prevExperienceItems, [name]: value };
+    });
   };
 
   return (

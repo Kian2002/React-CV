@@ -4,7 +4,8 @@ import ExperienceItems from "./ExperienceItems";
 import { v4 as uuidv4 } from "uuid";
 
 const Experience = ({ experienceInfo, setExperienceInfo }) => {
-  const id = experienceInfo[0].id;
+  const id = uuidv4();
+
   const [inputList, setInputList] = useState([
     <ExperienceItems
       key={id}
@@ -34,7 +35,6 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
       (item) => item.id !== e.target.id
     );
     setExperienceInfo(newExperienceInfo);
-    console.log(id);
   };
 
   return (
