@@ -7,8 +7,14 @@ import Output from "./output/Output";
 import DefaultStates from "./Input/DefaultStates";
 
 const Home = () => {
-  const { personalInfo, setPersonalInfo, experienceInfo, setExperienceInfo } =
-    DefaultStates();
+  const {
+    personalInfo,
+    setPersonalInfo,
+    experienceInfo,
+    setExperienceInfo,
+    educationInfo,
+    setEducationInfo,
+  } = DefaultStates();
 
   return (
     <main className={styles.main}>
@@ -21,9 +27,16 @@ const Home = () => {
           experienceInfo={experienceInfo}
           setExperienceInfo={setExperienceInfo}
         />
-        <Education />
+        <Education
+          educationInfo={educationInfo}
+          setEducationInfo={setEducationInfo}
+        />
       </div>
-      <Output personalInfo={personalInfo} experienceInfo={experienceInfo} />
+      <Output
+        personalInfo={personalInfo}
+        experienceInfo={experienceInfo}
+        educationInfo={educationInfo}
+      />
     </main>
   );
 };

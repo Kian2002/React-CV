@@ -13,7 +13,16 @@ const DefaultStates = () => {
 
   const [experienceInfo, setExperienceInfo] = useState([]);
 
-  return { personalInfo, setPersonalInfo, experienceInfo, setExperienceInfo };
+  const [educationInfo, setEducationInfo] = useState([]);
+
+  return {
+    personalInfo,
+    setPersonalInfo,
+    experienceInfo,
+    setExperienceInfo,
+    educationInfo,
+    setEducationInfo,
+  };
 };
 
 export default DefaultStates;

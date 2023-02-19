@@ -1,6 +1,6 @@
 import React from "react";
 
-const EducationItems = () => {
+const EducationItems = ({ setEducationItem }) => {
   return (
     <>
       <input type="text" name="universityName" placeholder="University name" />

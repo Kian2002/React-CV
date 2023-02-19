@@ -3,19 +3,30 @@ import styles from "../styles/home.module.css";
 import { v4 as uuidv4 } from "uuid";
 import EducationItems from "./EducationItems";
 
-const Education = () => {
+const Education = ({ educationInfo, setEducationInfo }) => {
+  const id = uuidv4();
   const [inputList, setInputList] = useState([
-    <EducationItems key={uuidv4()} />,
+    <EducationItems key={id} id={id} setEducationInfo={setEducationInfo} />,
   ]);
 
   const handleAdd = () => {
-    setInputList([...inputList, <EducationItems key={uuidv4()} />]);
+    const id = uuidv4();
+    setInputList([
+      ...inputList,
+      <EducationItems key={id} id={id} setEducationInfo={setEducationInfo} />,
+    ]);
   };
 
   const handleDelete = (e) => {
     const id = e.target.id;
     const newList = inputList.filter((item) => item.key !== id);
     setInputList(newList);
+
+    const newEducationInfo = educationInfo.filter((item) => {
+      item.id !== id;
+    });
+
+    setEducationInfo(newEducationInfo);
   };
 
   return (
