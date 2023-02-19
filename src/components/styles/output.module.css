@@ -18,8 +18,8 @@
 
 .wrapper {
     padding: 2rem;
-    background-color: var(--element-color);
-    color: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 /* experience */
@@ -58,7 +58,7 @@
 .personalMain {
     padding: 2rem;
     background-color: #BEB9B5;
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 .personalDetails {
@@ -79,14 +79,41 @@
     flex-direction: column;
 }
 
-/* Education */
+/* all */
 
-.education-wrapper {
+.wrapper__main {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.education-wrapper--h3 {
-    font-size: 1.6rem;
+.wrapper__h3 {
+    border-bottom: 1px solid var(--element-color);
+    color: #3a3e40;
+}
+
+.wrapper__content {
+    display: flex;
+    gap: 1rem;
+}
+
+.wrapper__content__date {
+    width: 25%;
+    color: #3a3e40;
+    font-weight: bold;
+}
+
+.wrapper__content__main {
+    width: 100%;
+}
+
+.wrapper__content__main div {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper__content__main h4 {
+    color: #3a3e40;
+    width: 100%;
 }
