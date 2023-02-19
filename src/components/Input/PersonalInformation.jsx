@@ -12,7 +12,7 @@ const PersonalInformation = ({ personalInfo, setPersonalInfo }) => {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Personal Information</h1>
+      <h3>Personal Information</h3>
       <div className={styles["input-wrapper"]}>
         <input
           type="text"

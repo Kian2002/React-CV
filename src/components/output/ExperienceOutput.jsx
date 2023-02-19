@@ -5,7 +5,7 @@ import styles from "../styles/output.module.css";
 export const ExperienceOutput = ({ experienceInfo }) => {
   return (
     <div className={styles.experience}>
-      <h1>Experience</h1>
+      <h3>Experience</h3>
       {experienceInfo.map((item) => {
         return (
           <div key={uuidv4()} className={styles.experienceItems}>

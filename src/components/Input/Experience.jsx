@@ -33,7 +33,7 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Experience</h1>
+      <h3>Experience</h3>
       {inputList.map((item) => {
         return (
           <div key={item.key} className={styles["input-wrapper"]}>

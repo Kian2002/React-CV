@@ -31,7 +31,7 @@ const Education = ({ educationInfo, setEducationInfo }) => {
 
   return (
     <div className={styles.wrapper}>
-      <h1>Education</h1>
+      <h3>Education</h3>
       {inputList.map((item) => {
         return (
           <div key={item.key} className={styles["input-wrapper"]}>

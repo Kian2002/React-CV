@@ -22,6 +22,8 @@
     color: var(--text-color);
 }
 
+/* experience */
+
 .experience {
     display: flex;
     flex-direction: column;
@@ -51,6 +53,8 @@
     gap: .5rem;
 }
 
+/* personal */
+
 .personalMain {
     padding: 2rem;
     background-color: #BEB9B5;
@@ -73,4 +77,16 @@
 .details div {
     display: flex;
     flex-direction: column;
+}
+
+/* Education */
+
+.education-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.education-wrapper--h3 {
+    font-size: 1.6rem;
 }

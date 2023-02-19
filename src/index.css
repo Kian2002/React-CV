@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 :root {
@@ -15,4 +16,8 @@ body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
   background-color: #BEB9B5;
+}
+
+body {
+  font-size: 1.5rem;
 }
