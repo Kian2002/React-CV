@@ -18,7 +18,6 @@ const ExperienceItems = ({ setExperienceInfo, id }) => {
         updatedExperienceInfo[index] = experienceItems;
         return updatedExperienceInfo;
       } else {
-        console.log("never say never");
         return [...prevExperienceInfo, experienceItems];
       }
     });

@@ -7,12 +7,7 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
   const id = uuidv4();
 
   const [inputList, setInputList] = useState([
-    <ExperienceItems
-      key={id}
-      id={id}
-      experienceInfo={experienceInfo}
-      setExperienceInfo={setExperienceInfo}
-    />,
+    <ExperienceItems key={id} id={id} setExperienceInfo={setExperienceInfo} />,
   ]);
 
   const handleAdd = () => {
@@ -22,7 +17,6 @@ const Experience = ({ experienceInfo, setExperienceInfo }) => {
       <ExperienceItems
         key={id}
         id={id}
-        experienceInfo={experienceInfo}
         setExperienceInfo={setExperienceInfo}
       />,
     ]);
